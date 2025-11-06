@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>你您的设备已被感染</title>
+    <style>
+        /* 初始警示界面样式 */
+        .warning {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #d63031;
+            color: white;
+            font-family: Arial;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            z-index: 10;
+        }
+        .lock {
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+        .text {
+            font-size: 22px;
+            text-align: center;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        /* 反转界面样式 */
+        .prank {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #4cd137;
+            color: white;
+            font-family: Arial;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            z-index: 20;
+        }
+        .laugh {
+            font-size: 100px;
+            margin-bottom: 30px;
+        }
+        .prank-text {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 初始警示界面 -->
+    <div class="warning">
+        <div class="lock">🔒</div>
+        <div class="text">
+            注意，你的文件已被加密<br>
+            我该怎么办？<br>
+            请您发送到邮箱953159910@qq.com 50$
+        </div>
+    </div>
+
+    <!-- 反转界面 -->
+    <div class="prank">
+        <div class="laugh">😂😂😂</div>
+        <div class="prank-text">
+            被骗啦！<br>
+            恭喜你成功触发整蛊成就～
+        </div>
+    </div>
+
+    <script>
+        // 5秒后切换到反转界面
+        setTimeout(() => {
+            document.querySelector('.warning').style.display = 'none';
+            document.querySelector('.prank').style.display = 'flex';
+        }, 10000);
+    </script>
+</body>
+</html>
